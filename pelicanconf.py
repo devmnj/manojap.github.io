@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Manoj'
 SITENAME = 'Debug'
 SITEURL = ''
-
+THEME = 'themes/elegant'
 PATH = 'content'
 
 TIMEZONE = 'Asia/Calcutta'
