@@ -10,23 +10,23 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="author" content="Manoj" />
+        <meta name="author" content="developerm" />
 
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="how to, Python, selenium,python, " />
+<meta name="keywords" content="%formating, formatting, Python, " />
 
-<meta property="og:title" content="Behind the scene : Wallspyder bots "/>
-<meta property="og:url" content="/behind-the-scene-wallspyder-bots.html" />
-<meta property="og:description" content="Selenium automation with wallspyder bots" />
+<meta property="og:title" content="date formatting "/>
+<meta property="og:url" content="/date-formatting.html" />
+<meta property="og:description" content="Date formatting In Python you can format date string using following predefined strings , %y/%Y -Year %a/A Week Day %b/B Month and %d for day ``` The letter with lowercase (%y/Y%) gives you abbreviated values, `say 20 for 2020, Thu for Thursday` etc ```python &gt;&gt;&gt; print( today.strftime(&#34;%y …" />
 <meta property="og:site_name" content="Debug" />
-<meta property="og:article:author" content="Manoj" />
-<meta property="og:article:published_time" content="2020-08-09T00:00:00+05:30" />
-<meta name="twitter:title" content="Behind the scene : Wallspyder bots ">
-<meta name="twitter:description" content="Selenium automation with wallspyder bots">
+<meta property="og:article:author" content="developerm" />
+<meta property="og:article:published_time" content="2020-06-19T20:46:00+05:30" />
+<meta name="twitter:title" content="date formatting ">
+<meta name="twitter:description" content="Date formatting In Python you can format date string using following predefined strings , %y/%Y -Year %a/A Week Day %b/B Month and %d for day ``` The letter with lowercase (%y/Y%) gives you abbreviated values, `say 20 for 2020, Thu for Thursday` etc ```python &gt;&gt;&gt; print( today.strftime(&#34;%y …">
 
-        <title>Behind the scene : Wallspyder bots  · Debug
+        <title>date formatting  · Debug
 </title>
 
 
@@ -67,8 +67,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="/behind-the-scene-wallspyder-bots.html">
-                Behind the scene : Wallspyder bots
+            <a href="/date-formatting.html">
+                date formatting
             </a>
         </h1>
     </header>
@@ -77,32 +77,42 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Python is really interesting, isn't it? Here is one of my opensource project for the programming community for just fun. </p>
-<h2>wallspyder</h2>
-<p>Wallspyder package is a collection of selenium webdriver automation scripts which let you query and download images silently using Chrome or Firefox browser. The package is including support for following websites</p>
-<p><a href="http://unsplash.com">Unslash</a>
-<a href="http://pexels.com">Pexels</a>
-<a href="http://wallpaperflae.com">WallpaperFlare</a></p>
-<h2>How to use</h2>
-<p>Using the package is very simple just install or clone the repo from Github</p>
-<h3>install the package from git</h3>
-<div class="highlight"><pre><span></span> <span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">manojap</span><span class="o">/</span><span class="n">wallspyder</span><span class="o">.</span><span class="n">git</span>
-<span class="c1">#import package</span>
-<span class="kn">from</span> <span class="nn">wallspyder</span> <span class="kn">import</span> <span class="n">pexels</span> 
-<span class="n">pexels</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;fruits&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">download</span><span class="p">()</span>
+            <h2>Date formatting</h2>
+<p>In Python you can format date string using following predefined strings ,</p>
+<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">y</span><span class="o">/%</span><span class="n">Y</span> <span class="o">-</span><span class="n">Year</span> <span class="o">%</span><span class="n">a</span><span class="o">/</span><span class="n">A</span> <span class="n">Week</span> <span class="n">Day</span> <span class="o">%</span><span class="n">b</span><span class="o">/</span><span class="n">B</span> <span class="n">Month</span> <span class="ow">and</span> <span class="o">%</span><span class="n">d</span> <span class="k">for</span> <span class="n">day</span>
+ <span class="err">```</span>
+<span class="n">The</span> <span class="n">letter</span> <span class="k">with</span> <span class="n">lowercase</span> <span class="p">(</span><span class="o">%</span><span class="n">y</span><span class="o">/</span><span class="n">Y</span><span class="o">%</span><span class="p">)</span> <span class="n">gives</span> <span class="n">you</span> <span class="n">abbreviated</span> <span class="n">values</span><span class="p">,</span> <span class="err">`</span><span class="n">say</span> <span class="mi">20</span> <span class="k">for</span> <span class="mi">2020</span><span class="p">,</span> <span class="n">Thu</span> <span class="k">for</span> <span class="n">Thursday</span><span class="err">`</span> <span class="n">etc</span>
+
+
+<span class="err">```</span><span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%y %b </span><span class="si">%a</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="mi">20</span> <span class="n">Jun</span> <span class="n">Thu</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%a</span><span class="s2">,</span><span class="si">%d</span><span class="s2">,%B,%y &quot;</span><span class="p">))</span>
+<span class="n">Thu</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="n">June</span><span class="p">,</span><span class="mi">20</span> 
 </pre></div>
 
 
-<p>Interested in the project  ?, have a look <a href="https://github.com/manojap/wallspyder">@ wallspyder</a></p>
+<h2>Locale date</h2>
+<p>Some times your application may be consumed by people for different localities or people from different countries, of course the date and time will be different. Python allows you to format date and time according to locale settings.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%c</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="n">Thu</span> <span class="n">Jun</span> <span class="mi">18</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="mi">2020</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%x</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="mi">06</span><span class="o">/</span><span class="mi">18</span><span class="o">/</span><span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%X</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Here <code>%c</code> stand for locale's date and time , <code>%x</code> for locale's time and <code>%X</code> for locale's date</p>
+<p>You can also use predefined string s for format time . <code>%I/H for 12/24 Hour</code>, <code>%M for Minutes</code>, <code>%S for second and % p for locales's AM/PM</code></p>
 
 
              
  
                 <p id="post-share-links">
     Share me with your friends on
-      <a href="https://twitter.com/intent/tweet?text=Behind%20the%20scene%20%3A%20Wallspyder%20bots&url=/behind-the-scene-wallspyder-bots.html&hashtags=how-to,python" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
- ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/behind-the-scene-wallspyder-bots.html" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
- ❄       <a href="mailto:?subject=Behind%20the%20scene%20%3A%20Wallspyder%20bots&amp;body=/behind-the-scene-wallspyder-bots.html" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+      <a href="https://twitter.com/intent/tweet?text=date%20formatting&url=/date-formatting.html&hashtags=formating,formatting" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/date-formatting.html" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=date%20formatting&amp;body=/date-formatting.html" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
 
             
             
@@ -117,32 +127,36 @@
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/wallspyder-bots.html" title="Previous: Wallspyder bots">Wallspyder bots</a></li>
+                <li class="previous-article">« <a href="/formatting.html" title="Previous: % formatting">% formatting</a></li>
+                <li class="next-article"><a href="/strformat.html" title="Next: str.format">str.format</a> »</li>
             </ul>
             </nav>
             </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-08-09T00:00:00+05:30">Sun 09 August 2020</time>
+            <time itemprop="dateCreated" datetime="2020-06-19T20:46:00+05:30">Fri 19 June 2020</time>
         <h4>More In This Series</h4>
     <ul class="multi-parts-list">
+            <li >
+            <a href="/strformat.html" title="str.format">Part 1: str.format</a>
+            </li>
             <li  class="active-part">
-            Part 1: Behind the scene : Wallspyder bots
+            Part 2: date formatting
             </li>
             <li >
-            <a href="/wallspyder-bots.html" title="Wallspyder bots">Part 2: Wallspyder bots</a>
+            <a href="/formatting.html" title="% formatting">Part 3: % formatting</a>
             </li>
     </ul>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#seleniumpython-ref">selenium,python</a>
+            <a class="category-link" href="/categories.html#python-ref">Python</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="/tags.html#how-to-ref">how to
-                    <span class="superscript">2</span>
+                <li><a href="/tags.html#formating-ref">%formating
+                    <span class="superscript">3</span>
 </a></li>
-                <li><a href="/tags.html#python-ref">Python
-                    <span class="superscript">2</span>
+                <li><a href="/tags.html#formatting-ref">formatting
+                    <span class="superscript">3</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

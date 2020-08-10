@@ -10,23 +10,23 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="author" content="Manoj" />
+        <meta name="author" content="developerm" />
 
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="how to, Python, selenium,python, " />
+<meta name="keywords" content="feedparser, how to, postaweek, Python, " />
 
-<meta property="og:title" content="Behind the scene : Wallspyder bots "/>
-<meta property="og:url" content="/behind-the-scene-wallspyder-bots.html" />
-<meta property="og:description" content="Selenium automation with wallspyder bots" />
+<meta property="og:title" content="RSS / ATOM Feed Parsing in Python "/>
+<meta property="og:url" content="/rss-atom-feed-parsing-in-python.html" />
+<meta property="og:description" content="Feeds are good for showing content from one website to another. Feeds are basically XML file with user define tags. As Python fan, I found reading content from a RSS feed in python is very simple and interesting. Most of the sites have feeds. In our example we are using …" />
 <meta property="og:site_name" content="Debug" />
-<meta property="og:article:author" content="Manoj" />
-<meta property="og:article:published_time" content="2020-08-09T00:00:00+05:30" />
-<meta name="twitter:title" content="Behind the scene : Wallspyder bots ">
-<meta name="twitter:description" content="Selenium automation with wallspyder bots">
+<meta property="og:article:author" content="developerm" />
+<meta property="og:article:published_time" content="2018-03-02T11:48:00+05:30" />
+<meta name="twitter:title" content="RSS / ATOM Feed Parsing in Python ">
+<meta name="twitter:description" content="Feeds are good for showing content from one website to another. Feeds are basically XML file with user define tags. As Python fan, I found reading content from a RSS feed in python is very simple and interesting. Most of the sites have feeds. In our example we are using …">
 
-        <title>Behind the scene : Wallspyder bots  · Debug
+        <title>RSS / ATOM Feed Parsing in Python  · Debug
 </title>
 
 
@@ -67,8 +67,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="/behind-the-scene-wallspyder-bots.html">
-                Behind the scene : Wallspyder bots
+            <a href="/rss-atom-feed-parsing-in-python.html">
+                RSS / ATOM Feed Parsing in Python
             </a>
         </h1>
     </header>
@@ -77,33 +77,41 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Python is really interesting, isn't it? Here is one of my opensource project for the programming community for just fun. </p>
-<h2>wallspyder</h2>
-<p>Wallspyder package is a collection of selenium webdriver automation scripts which let you query and download images silently using Chrome or Firefox browser. The package is including support for following websites</p>
-<p><a href="http://unsplash.com">Unslash</a>
-<a href="http://pexels.com">Pexels</a>
-<a href="http://wallpaperflae.com">WallpaperFlare</a></p>
-<h2>How to use</h2>
-<p>Using the package is very simple just install or clone the repo from Github</p>
-<h3>install the package from git</h3>
-<div class="highlight"><pre><span></span> <span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">manojap</span><span class="o">/</span><span class="n">wallspyder</span><span class="o">.</span><span class="n">git</span>
-<span class="c1">#import package</span>
-<span class="kn">from</span> <span class="nn">wallspyder</span> <span class="kn">import</span> <span class="n">pexels</span> 
-<span class="n">pexels</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;fruits&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">download</span><span class="p">()</span>
+            <p>Feeds are good for showing content from one website to another. Feeds are basically XML file with user define tags. As Python fan, I found reading content from a RSS feed in python is very simple and interesting. Most of the sites have feeds.</p>
+<blockquote>
+<p>In our example we are using SEBI's feed, which will provide latest events in Indian Stock Exchange market.</p>
+</blockquote>
+<p>First you need the parsing package from Pypi[Python Package Index]. You can Install the package using <a href="https://developermblog.wordpress.com/2015/12/13/install-packages-with-the-python-package-index/">pip</a> command as follows</p>
+<div class="highlight"><pre><span></span><span class="err">pip install feedparser</span>
 </pre></div>
 
 
-<p>Interested in the project  ?, have a look <a href="https://github.com/manojap/wallspyder">@ wallspyder</a></p>
+<p>Import the package and use it</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">feedparser</span>
+<span class="c1">#Programmer : MANOJ AP</span>
+<span class="c1">#Email: develprm@outlook.com</span>
+<span class="n">feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;https://www.sebi.gov.in/sebirss.xml&quot;</span><span class="p">)</span>
+
+<span class="n">feed_title</span> <span class="o">=</span> <span class="n">feed</span><span class="p">[</span><span class="s1">&#39;feed&#39;</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+<span class="n">feed_entries</span> <span class="o">=</span> <span class="n">feed</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">feed</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+    <span class="n">article_title</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">title</span>
+    <span class="n">article_link</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">link</span>
+    <span class="n">article_published_at</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">published</span> <span class="c1"># Unicode string</span>
+    <span class="n">article_published_at_parsed</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">published_parsed</span> <span class="c1"># Time object  </span>
+    <span class="k">print</span> <span class="s2">&quot;{}[{}]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">article_title</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">article_link</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s2">&quot;Published at {}&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">article_published_at</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The <strong>feedparser.parse</strong> accept a RSS feed and turn into Python object, as we know can access the elements in as in a list(<em>feed['feed']['title']</em>). <strong>feed.entries</strong> return the feed elements, we can use a for loop to traverse through the elements</p>
+<p>You are welcome to use the source code, <a href="https://github.com/manojap/SEBI-Reader">SEBI Reader project</a></p>
 
 
              
  
-                <p id="post-share-links">
-    Share me with your friends on
-      <a href="https://twitter.com/intent/tweet?text=Behind%20the%20scene%20%3A%20Wallspyder%20bots&url=/behind-the-scene-wallspyder-bots.html&hashtags=how-to,python" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
- ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/behind-the-scene-wallspyder-bots.html" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
- ❄       <a href="mailto:?subject=Behind%20the%20scene%20%3A%20Wallspyder%20bots&amp;body=/behind-the-scene-wallspyder-bots.html" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
-
+            
             
             
 
@@ -114,35 +122,22 @@
 
 
             <hr/>
-            <aside>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/wallspyder-bots.html" title="Previous: Wallspyder bots">Wallspyder bots</a></li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-08-09T00:00:00+05:30">Sun 09 August 2020</time>
-        <h4>More In This Series</h4>
-    <ul class="multi-parts-list">
-            <li  class="active-part">
-            Part 1: Behind the scene : Wallspyder bots
-            </li>
-            <li >
-            <a href="/wallspyder-bots.html" title="Wallspyder bots">Part 2: Wallspyder bots</a>
-            </li>
-    </ul>
+            <time itemprop="dateCreated" datetime="2018-03-02T11:48:00+05:30">Fri 02 March 2018</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#seleniumpython-ref">selenium,python</a>
+            <a class="category-link" href="/categories.html#python-ref">Python</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="/tags.html#how-to-ref">how to
-                    <span class="superscript">2</span>
+                <li><a href="/tags.html#feedparser-ref">feedparser
+                    <span class="superscript">1</span>
 </a></li>
-                <li><a href="/tags.html#python-ref">Python
-                    <span class="superscript">2</span>
+                <li><a href="/tags.html#how-to-ref">how to
+                    <span class="superscript">8</span>
+</a></li>
+                <li><a href="/tags.html#postaweek-ref">postaweek
+                    <span class="superscript">1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
